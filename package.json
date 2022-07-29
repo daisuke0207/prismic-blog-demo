@@ -6,17 +6,23 @@
     "dev": "remix dev"
   },
   "dependencies": {
+    "@prismicio/client": "^6.6.3",
+    "@prismicio/helpers": "^2.3.2",
+    "@prismicio/react": "^2.4.3",
     "@remix-run/node": "^1.6.5",
     "@remix-run/react": "^1.6.5",
     "@remix-run/vercel": "^1.6.5",
     "@vercel/node": "^2.4.4",
+    "marked": "^4.0.18",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.6.5",
     "@remix-run/eslint-config": "^1.6.5",
     "@remix-run/serve": "^1.6.5",
+    "@types/marked": "^4.0.3",
     "@types/react": "^17.0.47",
     "@types/react-dom": "^17.0.17",
     "eslint": "^8.20.0",
