@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,6 +7,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import styles from "~/styles/index.css";
+import { theme } from "~/styles/theme";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -14,15 +17,21 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: styles }];
+};
+
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <Meta />
         <Links />
       </head>
       <body>
-        <Outlet />
+        <ChakraProvider theme={theme} resetCSS={false}>
+          <Outlet />
+        </ChakraProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

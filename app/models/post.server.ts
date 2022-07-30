@@ -14,8 +14,8 @@ export async function getPost(uid: string | undefined) {
   if (!uid) return { uid: "undefined", title: "undefined", body: "undefined" };
   const document = await client.getByUID("blog", uid);
   const title = prismicH.asText(document.data.title);
-  const body = prismicH.asHTML(document.data.body);
-  return { uid, title, body };
+  const richBody = document.data.body;
+  return { uid, title, richBody: richBody };
 }
 
 export async function getPosts() {
