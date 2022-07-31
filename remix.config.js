@@ -7,5 +7,12 @@ module.exports = {
   assetsBuildDirectory: "public/build",
   serverBuildPath: "api/index.js",
   publicPath: "/build/",
-  serverDependenciesToBundle: ["react-markdown"],
+  mdx: async (filename) => {
+    const [rehypeHighlight] = await Promise.all([
+      import("rehype-highlight").then((mod) => mod.default),
+    ]);
+    return {
+      rehypePlugins: [rehypeHighlight],
+    };
+  },
 };

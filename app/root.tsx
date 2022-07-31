@@ -8,8 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import styles from "~/styles/index.css";
 import { theme } from "~/styles/theme";
+import highlightStyles from "highlight.js/styles/night-owl.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: "stylesheet", href: highlightStyles }];
 };
 
 export default function App() {

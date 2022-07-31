@@ -1,15 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
-  colors: {},
-  styles: {
-    global: (props: any) => ({
-      body: {
-        background:
-          "radial-gradient(circle at 50% 50%,rgba(206, 206, 206, 1),rgba(255, 255, 255, 1))",
-      },
-    }),
-  },
   mdx: {
     h1: {
       mt: "2rem",
@@ -32,7 +23,7 @@ export const theme = extendTheme({
     },
     h3: {
       mt: "3rem",
-      // mb: "0.5rem",
+      mb: "0.5rem",
       lineHeight: 1.25,
       fontWeight: "semibold",
       fontSize: "1.25rem",
